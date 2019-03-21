@@ -1,0 +1,77 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                Tasks
+            </h1>
+
+            <div id="grid"></div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var ds = new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: "leaderboard.json", dataType: "json"
+                }
+            }
+        });
+        $("#grid").kendoGrid({
+            dataSource: ds,
+            height: 550,
+            groupable: true,
+            sortable: true,
+            scrollable: true,
+            filterable: true,
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+            columns: [{
+                //  template: "<div class='customer-photo'" +
+                //  "style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                //   "<div class='customer-name'>#: ContactName #</div>",
+                template: "<div class='customer-photo'" +
+                "style='background-image: url(img/a4.jpg);'></div>" +
+                "<div class='customer-name'>#: fullName #</div>",
+                field: "fullName",
+                title: "Full Name",
+                width: 240
+            }, {
+                field: "university",
+                title: "University"
+            }, {
+                field: "points",
+                title: "Points"
+            }]
+        });
+    });
+</script>
+</div>
+
+<style type="text/css">
+    .customer-photo {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-size: 32px 35px;
+        background-position: center center;
+        vertical-align: middle;
+        line-height: 32px;
+        box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0,0,0,.2);
+        margin-left: 5px;
+    }
+    .customer-name {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 32px;
+        padding-left: 3px;
+    }
+</style>

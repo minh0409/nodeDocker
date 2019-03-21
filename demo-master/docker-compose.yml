@@ -1,0 +1,16 @@
+version: '2'  
+services:  
+  rest-service:
+    # build does not work with swamp or aws , use images
+    build: ./rest-service
+    ports:
+     - "80:80"
+    depends_on:
+     - db
+    environment:
+     - DATABASE_HOST=db
+  db:
+    build: ./database
+    ports:
+     - "3306:3306"
+     

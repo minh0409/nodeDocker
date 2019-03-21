@@ -1,0 +1,58 @@
+[
+  {
+    "fullName": "John Smith",
+    "university": "Georgia Institute of Technology",
+    "points": "450"
+  },
+  {
+    "fullName": "Steve Nguyen",
+    "university": "Georgia Institute of Technology",
+    "points": "300"
+  },
+  {
+    "fullName": "Anthony Tran",
+    "university": "University of Chicago",
+    "points": "410"
+  },
+  {
+    "fullName": "Anton Tran",
+    "university": "University of California",
+    "points": "410"
+  },
+  {
+    "fullName": "Nguyen Tran",
+    "university": "University of Wisconsin",
+    "points": "410"
+  },
+  {
+    "fullName": "Minh Tran",
+    "university": "University of Illinois",
+    "points": "410"
+  },
+  {
+    "fullName": "Lisa Tran",
+    "university": "University of Vermont",
+    "points": "430"
+  },
+  {
+    "fullName": "Amber Tran",
+    "university": "University of Denver",
+    "points": "400"
+  },
+  {
+    "fullName": "Xiaolin Tran",
+    "university": "University of Chicago",
+    "points": "414"
+  },
+  {
+    "fullName": "Wen Tran",
+    "university": "University of Georgia",
+    "points": "412"
+  },
+  {
+    "fullName": "Tiffany Tran",
+    "university": "University of Alabama",
+    "points": "498"
+  }
+
+]

@@ -1,0 +1,56 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                Tasks
+            </h1>
+
+            <div id="grid"></div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+	    
+	//var restserverip = 'localhost';
+	var restserverip = '34.224.173.2';
+	var restAPI = 'http://' + restserverip + '/Tasks/';
+	
+        var ds = new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: restAPI , dataType: "json"
+                }
+            }
+        });
+        $("#grid").kendoGrid({
+            dataSource: ds,
+            height: 550,
+            groupable: true,
+            sortable: true,
+            scrollable: true,
+            filterable: true,
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+            columns: [{              
+                field: "Id",
+                title: "Id",
+                width: 80
+            }, {
+                field: "Title",
+                title: "Title"	              		
+            }, {
+                field: "Status",
+                title: "Status"
+            }]
+        });
+    });
+</script>
+</div>
+
